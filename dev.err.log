@@ -1,3 +1,27 @@
 [2m6:54:55 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/pages/home/components/BrandMark.tsx (resolved id: C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/BrandMark.tsx) in C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Navigation.tsx. Does the file exist?
 [2m6:54:55 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/pages/home/components/BrandMark.tsx (resolved id: C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/BrandMark.tsx) in C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Navigation.tsx. Does the file exist?
 [2m6:54:55 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/pages/home/components/BrandMark.tsx (resolved id: C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/BrandMark.tsx) in C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Navigation.tsx. Does the file exist?
+[2m7:26:49 PM[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ,-[C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Footer.tsx:31:1]
+ 28 |       </div>
+ 29 |     </footer>
+ 30 |   );
+ 31 | }
+    : ^
+    `----
+  x Expected '</', got 'jsx text'
+    ,-[C:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Footer.tsx:29:1]
+ 26 |               ))}
+ 27 |             </div>
+ 28 |           </div>
+ 29 | ,->     </footer>
+ 30 | |     );
+ 31 | `-> }
+    `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/korey/OneDrive - Kyroscoe/Desktop/Websites/kyroscoe/src/pages/home/components/Footer.tsx[39m
+  

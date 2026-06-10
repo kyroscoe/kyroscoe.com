@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { projects } from './siteData';
 import { Panel, SectionIntro } from './ui';
@@ -25,13 +25,26 @@ export function Work() {
                 <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Work completed</div>
                 <p className="mt-3 text-sm leading-7 text-slate-200">{project.work}</p>
               </div>
-              <button
-                onClick={() => navigate('/work')}
-                className="mt-6 inline-flex items-center gap-2 rounded-md border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-300/60 hover:bg-cyan-300/15"
-              >
-                View Case Study
-                <ArrowRight className="h-4 w-4" />
-              </button>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <button
+                  onClick={() => navigate('/work')}
+                  className="inline-flex items-center gap-2 rounded-md border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-300/60 hover:bg-cyan-300/15"
+                >
+                  View Case Study
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-black/20 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/40 hover:text-white"
+                  >
+                    Visit Site
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
             </Panel>
           ))}
         </div>

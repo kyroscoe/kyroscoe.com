@@ -14,6 +14,8 @@ export type ProjectCard = {
   type: string;
   description: string;
   work: string;
+  url?: string;
+  image?: string;
 };
 
 export type CaseStudy = ProjectCard & {
@@ -75,12 +77,24 @@ export const projects: ProjectCard[] = [
     type: 'Website / Business Web Presence',
     description: 'Website and web presence for a dry cleaning pads and covers business.',
     work: 'Website structure, product-focused content, resources page planning, deployment support, and DNS/domain troubleshooting.',
+    url: 'https://buckeyepads.com/',
+    image: '/brand/buckeye-pads-logo.png',
   },
   {
     name: 'BB Property',
     type: 'Website / Small Business Web Presence',
     description: 'Website project for a property-focused business.',
     work: 'Website structure, service presentation, brand layout, and launch support.',
+    url: 'https://bb-property.com/',
+    image: '/brand/bb-property-logo.jpg',
+  },
+  {
+    name: 'Calibration Media',
+    type: 'Website / Business Web Presence',
+    description: 'Website and web presence for a media-focused business.',
+    work: 'Website structure, service presentation, brand layout, content organization, and launch support.',
+    url: 'https://calibrationmediagroup.com/',
+    image: '/brand/calibration-media-logo.png',
   },
   {
     name: 'CRM Project',
@@ -89,16 +103,11 @@ export const projects: ProjectCard[] = [
     work: 'Interface planning, workflow mapping, feature structure, and custom software direction.',
   },
   {
-    name: 'Kyroscoe',
-    type: 'Brand Website / Technology Business',
-    description: 'Main website for presenting Kyroscoe services, work, and project inquiries.',
-    work: 'Brand positioning, service structure, homepage cleanup, portfolio planning, and contact flow.',
-  },
-  {
     name: 'KyroAI',
     type: 'AI / Brand Concept / Technical Project',
     description: "AI-focused brand and project concept connected to Kyroscoe's technology direction.",
     work: 'Brand direction, concept planning, visual identity exploration, and technical positioning.',
+    image: '/brand/kyroai.png',
   },
 ];
 
@@ -109,16 +118,20 @@ export const caseStudies: CaseStudy[] = projects.map((project) => ({
       ? 'A practical website and web presence project for a specialized small business with product-specific information needs.'
       : project.name === 'BB Property'
         ? 'A small business web presence project focused on clear service presentation and launch-ready structure.'
+        : project.name === 'Calibration Media'
+          ? 'A business web presence project focused on presenting media services with a clean structure and practical launch path.'
         : project.name === 'CRM Project'
           ? 'A business system planning project focused on turning workflow needs into a usable CRM direction.'
           : project.name === 'KyroAI'
             ? 'A brand and technical concept project exploring how an AI-focused direction could fit into the Kyroscoe ecosystem.'
-            : 'A brand website project focused on making Kyroscoe clearer, sharper, and easier for small businesses to understand.',
+            : 'A practical technology project focused on making the business clearer, sharper, and easier to manage.',
   problem:
     project.name === 'CRM Project'
       ? 'The business needed a clearer structure for tracking relationships, tasks, and workflow steps before custom software decisions could be made.'
       : project.name === 'KyroAI'
         ? 'The project needed a grounded concept, brand direction, and technical positioning before moving into build decisions.'
+        : project.name === 'Calibration Media'
+          ? 'The business needed a cleaner web presence with clearer service presentation and a stronger path toward launch.'
         : 'The project needed clearer messaging, a more useful page structure, and a cleaner path from visitor interest to project inquiry.',
   tools:
     project.name === 'CRM Project'

@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Footer } from '../home/components/Footer';
 import { Navigation } from '../home/components/Navigation';
@@ -31,11 +31,29 @@ export default function WorkPage() {
                 <Panel key={study.name} className="overflow-hidden">
                   <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
                     <div className="border-b border-cyan-300/10 bg-black/20 p-6 lg:border-b-0 lg:border-r lg:border-cyan-300/10">
-                      <div className="flex aspect-[16/10] items-center justify-center border border-cyan-300/15 bg-[linear-gradient(135deg,rgba(15,244,226,0.08),rgba(255,255,255,0.02))]">
-                        <div className="text-center">
-                          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/75">Visual placeholder</div>
-                          <div className="mt-3 text-2xl font-black text-white">{study.name}</div>
-                        </div>
+                      <div className="flex aspect-[16/10] items-center justify-center overflow-hidden border border-cyan-300/15 bg-[linear-gradient(135deg,rgba(15,244,226,0.08),rgba(255,255,255,0.02))]">
+                        {study.image ? (
+                          <>
+                            {study.url ? (
+                              <a
+                                href={study.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={`Open ${study.name} website`}
+                                className="flex h-full w-full items-center justify-center"
+                              >
+                                <img src={study.image} alt={`${study.name} logo`} className="max-h-full max-w-full object-contain p-6" />
+                              </a>
+                            ) : (
+                              <img src={study.image} alt={`${study.name} visual`} className="h-full w-full object-contain p-6" />
+                            )}
+                          </>
+                        ) : (
+                          <div className="text-center">
+                            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/75">Project planning</div>
+                            <div className="mt-3 text-2xl font-black text-white">{study.name}</div>
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div className="p-6 sm:p-8">
@@ -70,13 +88,26 @@ export default function WorkPage() {
                         </div>
                       </div>
 
-                      <button
-                        onClick={() => navigate('/contact')}
-                        className="mt-8 inline-flex items-center gap-2 rounded-md bg-cyan-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
-                      >
-                        Start a Project
-                        <ArrowRight className="h-4 w-4" />
-                      </button>
+                      <div className="mt-8 flex flex-wrap gap-3">
+                        {study.url && (
+                          <a
+                            href={study.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-md border border-cyan-300/25 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/60 hover:bg-cyan-300/15"
+                          >
+                            Visit Site
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        )}
+                        <button
+                          onClick={() => navigate('/contact')}
+                          className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
+                        >
+                          Start a Project
+                          <ArrowRight className="h-4 w-4" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </Panel>
