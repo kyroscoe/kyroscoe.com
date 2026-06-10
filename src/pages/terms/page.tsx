@@ -6,7 +6,7 @@ import { usePageSEO } from '../../utils/usePageSEO';
 
 export default function Terms() {
   usePageSEO({
-    title: 'Terms of Service | Kyroscoe IT Solutions',
+    title: 'Terms of Service | Kyroscoe',
     description: 'Review the Kyroscoe terms of service covering billing, support availability, project terms, and legal responsibilities.',
   });
 
@@ -42,12 +42,10 @@ export default function Terms() {
               <h2 className="mb-4 text-2xl font-bold text-gray-900">2. Services Provided</h2>
               <p className="mb-3 leading-relaxed text-gray-700">Kyroscoe offers:</p>
               <ul className="mb-4 list-disc space-y-2 pl-6 text-gray-700">
-                <li>IT support and consulting</li>
-                <li>Computer repair</li>
+                <li>IT support and business technology help, including computer repair when appropriate</li>
                 <li>Cybersecurity guidance</li>
-                <li>Web and software development</li>
-                <li>Business automations</li>
-                <li>Creator tools and custom solutions</li>
+                <li>Website builds, fixes, and redesigns</li>
+                <li>Custom tools, automations, and technical consulting</li>
               </ul>
               <p className="leading-relaxed text-gray-700">Services may change or expand over time.</p>
             </section>

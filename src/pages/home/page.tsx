@@ -1,31 +1,27 @@
-import { Booking } from './components/Booking';
-import { ClientPortal } from './components/ClientPortal';
 import { Contact } from './components/Contact';
-import { Development } from './components/Development';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
+import { Intro } from './components/Intro';
 import { Navigation } from './components/Navigation';
 import { Services } from './components/Services';
-import { WebDesign } from './components/WebDesign';
+import { Work } from './components/Work';
 import { PageShell } from './components/ui';
 import { usePageSEO } from '../../utils/usePageSEO';
 
 export default function HomePage() {
   usePageSEO({
-    title: 'Kyroscoe IT Solutions | IT Support, Development, and Web Design',
+    title: 'Kyroscoe | Practical Technology for Small Businesses',
     description:
-      'Kyroscoe delivers IT support, software development, cybersecurity, and modern web design for businesses that need practical, dependable technology help.',
+      'Kyroscoe helps small businesses with websites, IT support, cybersecurity guidance, custom tools, and practical technical consulting.',
   });
 
   return (
     <PageShell>
       <Navigation />
       <Hero />
-      <ClientPortal />
+      <Intro />
       <Services />
-      <Development />
-      <WebDesign />
-      <Booking />
+      <Work />
       <Contact />
       <Footer />
     </PageShell>

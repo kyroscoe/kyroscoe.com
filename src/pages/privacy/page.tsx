@@ -6,7 +6,7 @@ import { usePageSEO } from '../../utils/usePageSEO';
 
 export default function Privacy() {
   usePageSEO({
-    title: 'Privacy Policy | Kyroscoe IT Solutions',
+    title: 'Privacy Policy | Kyroscoe',
     description: 'Read the Kyroscoe privacy policy for information on data collection, security, retention, and your privacy rights.',
   });
 
@@ -49,7 +49,7 @@ export default function Privacy() {
                 <li>Email address</li>
                 <li>Phone number</li>
                 <li>Business information (if applicable)</li>
-                <li>Details you provide during IT support, development projects, or consultations</li>
+                <li>Details you provide during IT support, cybersecurity guidance, website projects, custom tool work, or consultations</li>
                 <li>Any files or diagnostic information you voluntarily share for troubleshooting</li>
               </ul>
 
@@ -77,7 +77,7 @@ export default function Privacy() {
               <h2 className="mb-4 text-2xl font-bold text-gray-900">3. How We Use Your Information</h2>
               <p className="mb-3 leading-relaxed text-gray-700">We use the information we collect to:</p>
               <ul className="mb-4 list-disc space-y-2 pl-6 text-gray-700">
-                <li>Provide IT support, development, consulting, and automation services</li>
+                <li>Provide IT support, cybersecurity guidance, website work, consulting, and automation services</li>
                 <li>Communicate with you about your requests</li>
                 <li>Manage billing and invoicing</li>
                 <li>Improve our website and services</li>

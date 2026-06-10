@@ -1,31 +1,33 @@
-import { primaryServices, process } from './siteData';
+import { services } from './siteData';
 import { Panel, SectionIntro } from './ui';
 
 export function Services() {
   return (
-    <section className="border-b border-white/10 bg-[#08131e] py-20 sm:py-24">
+    <section className="border-b border-cyan-300/10 bg-[#03080b] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionIntro
-          eyebrow="Core services"
-          title="Focused IT services that solve real operational problems."
-          text="Kyroscoe helps businesses reduce downtime, tighten operations, and build the right systems when off-the-shelf tools stop fitting."
+          eyebrow="Services"
+          title="Technical help for the systems small businesses actually use."
+          text="Four practical service areas, kept broad enough for real business problems and specific enough to know where the work starts."
         />
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          {primaryServices.map((service) => {
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {services.map((service) => {
             const Icon = service.icon;
             return (
-              <Panel key={service.title} className="p-7">
-                <div className="mb-5 inline-flex rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-3 text-emerald-300">
-                  <Icon className="h-6 w-6" />
+              <Panel key={service.title} className="p-6">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <div className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">{service.tag}</div>
+                  <div className="border border-cyan-300/20 bg-cyan-300/10 p-2 text-cyan-300">
+                    <Icon className="h-5 w-5" />
+                  </div>
                 </div>
-                <div className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/80">{service.tag}</div>
-                <h3 className="text-2xl font-black text-white">{service.title}</h3>
+                <h3 className="text-xl font-black text-white">{service.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-300">{service.description}</p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-200">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-emerald-300" />
+                      <span className="mt-2 h-1.5 w-1.5 flex-none bg-cyan-300" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -33,16 +35,6 @@ export function Services() {
               </Panel>
             );
           })}
-        </div>
-
-        <div className="mt-16 grid gap-4 lg:grid-cols-4">
-          {process.map((item) => (
-            <Panel key={item.step} className="p-6">
-              <div className="text-sm font-bold tracking-[0.28em] text-emerald-300">{item.step}</div>
-              <h4 className="mt-4 text-xl font-black text-white">{item.title}</h4>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{item.text}</p>
-            </Panel>
-          ))}
         </div>
       </div>
     </section>

@@ -1,50 +1,34 @@
-
-import type { RouteObject } from "react-router-dom";
-import NotFound from "../pages/NotFound";
-import Home from "../pages/home/page";
-import Services from "../pages/services/page";
-import Development from "../pages/development/page";
-import WebDesign from "../pages/web-design/page";
-import Contact from "../pages/contact/page";
-import Booking from "../pages/booking/page";
-import Privacy from "../pages/privacy/page";
-import Terms from "../pages/terms/page";
+import type { RouteObject } from 'react-router-dom';
+import NotFound from '../pages/NotFound';
+import About from '../pages/about/page';
+import Contact from '../pages/contact/page';
+import Home from '../pages/home/page';
+import Services from '../pages/services/page';
+import Work from '../pages/work/page';
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/services",
+    path: '/work',
+    element: <Work />,
+  },
+  {
+    path: '/services',
     element: <Services />,
   },
   {
-    path: "/development",
-    element: <Development />,
+    path: '/about',
+    element: <About />,
   },
   {
-    path: "/web-design",
-    element: <WebDesign />,
-  },
-  {
-    path: "/contact",
+    path: '/contact',
     element: <Contact />,
   },
   {
-    path: "/booking",
-    element: <Booking />,
-  },
-  {
-    path: "/privacy",
-    element: <Privacy />,
-  },
-  {
-    path: "/terms",
-    element: <Terms />,
-  },
-  {
-    path: "*",
+    path: '*',
     element: <NotFound />,
   },
 ];
