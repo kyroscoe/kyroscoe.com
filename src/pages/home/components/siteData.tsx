@@ -14,15 +14,15 @@ export type ProjectCard = {
   type: string;
   description: string;
   work: string;
+  tags?: string[];
   url?: string;
   image?: string;
 };
 
 export type CaseStudy = ProjectCard & {
   overview: string;
-  problem: string;
-  tools: string[];
-  outcome: string;
+  bullets: string[];
+  tags: string[];
 };
 
 export const services: ServiceCard[] = [
@@ -74,78 +74,114 @@ export const services: ServiceCard[] = [
 export const projects: ProjectCard[] = [
   {
     name: 'Buckeye Pads',
-    type: 'Website / Business Web Presence',
-    description: 'Website and web presence for a dry cleaning pads and covers business.',
-    work: 'Website structure, product-focused content, resources page planning, deployment support, and DNS/domain troubleshooting.',
+    type: 'Small Business Website & Domain Cleanup',
+    description:
+      'Built a cleaner, more professional web presence for a U.S.-based industrial press pad and cover supplier.',
+    work: 'Website structure, product and resource organization, customer-facing copy, hosting setup, and domain/DNS troubleshooting.',
+    tags: ['Web Design', 'Small Business', 'DNS', 'Hosting', 'Copywriting'],
     url: 'https://buckeyepads.com/',
     image: '/brand/buckeye-pads-logo.png',
   },
   {
     name: 'BB Property',
-    type: 'Website / Small Business Web Presence',
-    description: 'Website project for a property-focused business.',
-    work: 'Website structure, service presentation, brand layout, and launch support.',
+    type: 'Local Business Website',
+    description:
+      'Created a professional website for a local property-focused business with clear service messaging and a simple contact path.',
+    work: 'Service structure, responsive layout, content organization, and practical launch-ready website implementation.',
+    tags: ['Web Design', 'Local Business', 'Responsive Design', 'Content Structure'],
     url: 'https://bb-property.com/',
     image: '/brand/bb-property-logo.jpg',
   },
   {
-    name: 'Calibration Media',
-    type: 'Website / Business Web Presence',
-    description: 'Website and web presence for a media-focused business.',
-    work: 'Website structure, service presentation, brand layout, content organization, and launch support.',
-    url: 'https://calibrationmediagroup.com/',
-    image: '/brand/calibration-media-logo.png',
-  },
-  {
-    name: 'CRM Project',
-    type: 'Custom Tool / Business System',
-    description: 'CRM concept and planning for a business workflow tool.',
-    work: 'Interface planning, workflow mapping, feature structure, and custom software direction.',
+    name: 'Service CRM Concept',
+    type: 'Custom Software Prototype',
+    description:
+      'Designed and developed a CRM concept for service-based businesses managing customers, jobs, notes, and workflows.',
+    work: 'Product structure, workflow planning, interface refinement, and AI-assisted development iteration.',
+    tags: ['Custom Software', 'CRM', 'Product Design', 'Workflow Automation', 'AI-Assisted Development'],
   },
   {
     name: 'KyroAI',
-    type: 'AI / Brand Concept / Technical Project',
-    description: "AI-focused brand and project concept connected to Kyroscoe's technology direction.",
-    work: 'Brand direction, concept planning, visual identity exploration, and technical positioning.',
+    type: 'Internal AI Workflow Concept',
+    description:
+      'Developed an internal AI-focused concept under the Kyroscoe brand for practical small-business workflows and automation.',
+    work: 'AI workflow exploration, brand direction, product positioning, and practical implementation planning.',
+    tags: ['AI', 'Automation', 'Internal R&D', 'Branding', 'Small Business Technology'],
     image: '/brand/kyroai.png',
+  },
+  {
+    name: 'Shopify Site Support',
+    type: 'Pages, Theme Access & Deployment Planning',
+    description:
+      'Helped a small-business client move from a separately built website toward Shopify by clarifying access and setup needs.',
+    work: 'Shopify permissions review, page setup planning, theme access clarification, and implementation guidance.',
+    tags: ['Shopify', 'Client Support', 'Web Deployment', 'Permissions', 'Small Business'],
   },
 ];
 
-export const caseStudies: CaseStudy[] = projects.map((project) => ({
-  ...project,
-  overview:
-    project.name === 'Buckeye Pads'
-      ? 'A practical website and web presence project for a specialized small business with product-specific information needs.'
-      : project.name === 'BB Property'
-        ? 'A small business web presence project focused on clear service presentation and launch-ready structure.'
-        : project.name === 'Calibration Media'
-          ? 'A business web presence project focused on presenting media services with a clean structure and practical launch path.'
-        : project.name === 'CRM Project'
-          ? 'A business system planning project focused on turning workflow needs into a usable CRM direction.'
-          : project.name === 'KyroAI'
-            ? 'A brand and technical concept project exploring how an AI-focused direction could fit into the Kyroscoe ecosystem.'
-            : 'A practical technology project focused on making the business clearer, sharper, and easier to manage.',
-  problem:
-    project.name === 'CRM Project'
-      ? 'The business needed a clearer structure for tracking relationships, tasks, and workflow steps before custom software decisions could be made.'
-      : project.name === 'KyroAI'
-        ? 'The project needed a grounded concept, brand direction, and technical positioning before moving into build decisions.'
-        : project.name === 'Calibration Media'
-          ? 'The business needed a cleaner web presence with clearer service presentation and a stronger path toward launch.'
-        : 'The project needed clearer messaging, a more useful page structure, and a cleaner path from visitor interest to project inquiry.',
-  tools:
-    project.name === 'CRM Project'
-      ? ['Workflow mapping', 'Interface planning', 'CRM concepts', 'Custom software planning']
-      : project.name === 'KyroAI'
-        ? ['Brand direction', 'AI concept planning', 'Visual identity', 'Technical positioning']
-        : ['Content structure', 'Responsive web layout', 'DNS and deployment support', 'Launch planning'],
-  outcome:
-    project.name === 'CRM Project'
-      ? 'A clearer software direction with mapped features, workflow priorities, and a stronger foundation for future build work.'
-      : project.name === 'KyroAI'
-        ? 'A sharper project concept with a clearer connection to Kyroscoe and a more defined technical direction.'
-        : 'A cleaner, more practical web presence that is easier to understand, maintain, and launch.',
-}));
+export const caseStudies: CaseStudy[] = [
+  {
+    ...projects[0],
+    overview:
+      'Built a cleaner, more professional web presence for a U.S.-based industrial press pad and cover supplier. The project focused on making the business easier to understand online, organizing product and resource information, preparing the company for direct-to-customer sales, and cleaning up domain/DNS issues so the site could launch correctly.',
+    bullets: [
+      'Built a modern small-business website for an industrial dry-cleaning and laundry supplier.',
+      'Wrote and refined customer-facing website copy for distributors, equipment manufacturers, and commercial operators.',
+      'Organized product, resource, and ordering information into a clearer site structure.',
+      'Supported direct-to-customer sales positioning as the business expanded beyond local distributor channels.',
+      'Configured hosting and helped troubleshoot domain/DNS issues, including conflicting www records.',
+    ],
+    tags: ['Web Design', 'Small Business', 'DNS', 'Hosting', 'Copywriting'],
+  },
+  {
+    ...projects[1],
+    overview:
+      'Created a professional website for a local property-focused business, with a clean layout, clear service messaging, and a structure designed to help visitors quickly understand the company and make contact.',
+    bullets: [
+      'Built a straightforward business website focused on clarity and trust.',
+      "Organized the company's services and contact path into a simple customer journey.",
+      'Created a responsive layout suitable for desktop and mobile visitors.',
+      'Focused the site around practical information instead of bloated marketing copy.',
+    ],
+    tags: ['Web Design', 'Local Business', 'Responsive Design', 'Content Structure'],
+  },
+  {
+    ...projects[2],
+    overview:
+      'Designed and developed a CRM concept for service-based businesses that need a better way to manage customers, jobs, notes, and operational workflows. The work focused on product structure, user experience, workflow planning, and building toward a more polished, sellable software platform.',
+    bullets: [
+      'Created a custom CRM concept for roofing and service-based business workflows.',
+      'Planned core modules around customers, jobs, notes, status tracking, and business operations.',
+      'Refined the user interface to feel more like a real product and less like a generic internal tool.',
+      'Used AI-assisted development workflows to accelerate planning, iteration, and implementation.',
+    ],
+    tags: ['Custom Software', 'CRM', 'Product Design', 'Workflow Automation', 'AI-Assisted Development'],
+  },
+  {
+    ...projects[3],
+    overview:
+      'Developed an internal AI-focused concept under the Kyroscoe brand to explore how small businesses can use AI-assisted workflows, automation, and technical guidance without needing a large internal technology team.',
+    bullets: [
+      'Explored AI-assisted workflows for small-business technology operations.',
+      'Developed brand direction and product positioning for a Kyroscoe AI concept.',
+      'Focused on practical uses of AI: support, automation, documentation, and business process improvement.',
+      'Positioned the concept around useful implementation instead of hype.',
+    ],
+    tags: ['AI', 'Automation', 'Internal R&D', 'Branding', 'Small Business Technology'],
+  },
+  {
+    ...projects[4],
+    overview:
+      'Helped a small-business client move from a separately built website toward Shopify by identifying required permissions, planning page setup, and preparing the site structure for implementation inside the Shopify environment.',
+    bullets: [
+      'Reviewed Shopify access and identified missing permissions needed to create and manage pages.',
+      'Helped clarify the difference between theme access, file access, and page-management permissions.',
+      'Planned how an externally built site could be recreated inside Shopify.',
+      'Supported the client with clear instructions so they could grant the correct access.',
+    ],
+    tags: ['Shopify', 'Client Support', 'Web Deployment', 'Permissions', 'Small Business'],
+  },
+];
 
 export const navLinks = [
   { label: 'Work', href: '/work' },

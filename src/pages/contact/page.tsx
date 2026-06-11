@@ -34,22 +34,24 @@ export default function ContactPage() {
 
             <Panel className="p-6 sm:p-8">
               <form
-                action="mailto:support@kyroscoe.com"
-                method="post"
-                encType="text/plain"
+                name="contact"
+                action="/contact?success=true"
+                method="POST"
+                data-netlify="true"
                 className="grid gap-5"
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <label className="grid gap-2 text-sm font-semibold text-slate-200">
                   Name
-                  <input name="name" className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
+                  <input name="name" autoComplete="name" required className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
                 </label>
                 <label className="grid gap-2 text-sm font-semibold text-slate-200">
                   Email
-                  <input name="email" type="email" className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
+                  <input name="email" type="email" autoComplete="email" required className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
                 </label>
                 <label className="grid gap-2 text-sm font-semibold text-slate-200">
                   Business name
-                  <input name="business" className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
+                  <input name="business" autoComplete="organization" className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
                 </label>
                 <label className="grid gap-2 text-sm font-semibold text-slate-200">
                   What do you need help with?

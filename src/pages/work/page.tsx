@@ -23,7 +23,7 @@ export default function WorkPage() {
             <SectionIntro
               eyebrow="Work"
               title="Case studies for practical technology projects."
-              text="A closer look at websites, business systems, brand direction, and technical planning work."
+              text="Selected work from Kyroscoe projects, client builds, and internal product experiments. These examples focus on practical technology work: websites, systems, automation, support, security, and small-business problem solving."
             />
 
             <div className="space-y-8">
@@ -61,28 +61,24 @@ export default function WorkPage() {
                       <h2 className="mt-3 text-3xl font-black text-white">{study.name}</h2>
                       <p className="mt-4 text-sm leading-7 text-slate-300">{study.overview}</p>
 
-                      <div className="mt-8 grid gap-5 md:grid-cols-2">
-                        <div>
-                          <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white">Problem</h3>
-                          <p className="mt-3 text-sm leading-7 text-slate-300">{study.problem}</p>
-                        </div>
-                        <div>
-                          <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white">Outcome</h3>
-                          <p className="mt-3 text-sm leading-7 text-slate-300">{study.outcome}</p>
-                        </div>
-                      </div>
-
                       <div className="mt-8">
                         <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white">Work completed</h3>
-                        <p className="mt-3 text-sm leading-7 text-slate-300">{study.work}</p>
+                        <ul className="mt-4 space-y-3">
+                          {study.bullets.map((bullet) => (
+                            <li key={bullet} className="flex gap-3 text-sm leading-7 text-slate-300">
+                              <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
 
                       <div className="mt-8">
-                        <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white">Tools / skills used</h3>
+                        <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white">Tags</h3>
                         <div className="mt-4 flex flex-wrap gap-2">
-                          {study.tools.map((tool) => (
-                            <span key={tool} className="border border-cyan-300/15 bg-cyan-300/10 px-3 py-2 text-sm text-slate-200">
-                              {tool}
+                          {study.tags.map((tag) => (
+                            <span key={tag} className="border border-cyan-300/15 bg-cyan-300/10 px-3 py-2 text-sm text-slate-200">
+                              {tag}
                             </span>
                           ))}
                         </div>
