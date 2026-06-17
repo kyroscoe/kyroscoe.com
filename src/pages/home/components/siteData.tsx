@@ -103,12 +103,13 @@ export const projects: ProjectCard[] = [
     image: '/brand/bb-property-logo.jpg',
   },
   {
-    name: 'Service CRM Concept',
+    name: 'JobDock',
     type: 'Custom Software Prototype',
     description:
-      'Designed and developed a CRM concept for service-based businesses managing customers, jobs, notes, and workflows.',
+      'Designed and developed a CRM concept for service-based businesses managing customers, jobs, notes, and workflows under the JobDock brand.',
     work: 'Product structure, workflow planning, interface refinement, and AI-assisted development iteration.',
     tags: ['Custom Software', 'CRM', 'Product Design', 'Workflow Automation', 'AI-Assisted Development'],
+    image: '/brand/jobdock-logo.png',
   },
   {
     name: 'KyroAI',
@@ -171,9 +172,9 @@ export const caseStudies: CaseStudy[] = [
   {
     ...projects[3],
     overview:
-      'Designed and developed a CRM concept for service-based businesses that need a better way to manage customers, jobs, notes, and operational workflows. The work focused on product structure, user experience, workflow planning, and building toward a more polished, sellable software platform.',
+      'Designed and developed JobDock, a CRM concept for service-based businesses that need a better way to manage customers, jobs, notes, and operational workflows. The work focused on product structure, user experience, workflow planning, and building toward a more polished, sellable software platform.',
     bullets: [
-      'Created a custom CRM concept for roofing and service-based business workflows.',
+      'Created the JobDock CRM concept for roofing and service-based business workflows.',
       'Planned core modules around customers, jobs, notes, status tracking, and business operations.',
       'Refined the user interface to feel more like a real product and less like a generic internal tool.',
       'Used AI-assisted development workflows to accelerate planning, iteration, and implementation.',
