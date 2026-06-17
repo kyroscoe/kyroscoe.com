@@ -73,6 +73,15 @@ export const services: ServiceCard[] = [
 
 export const projects: ProjectCard[] = [
   {
+    name: 'Midwest Fencing',
+    type: 'Complete Website Design & Domain Hosting',
+    description:
+      'Designed and launched a complete website for an Ohio fencing company serving residential and commercial customers.',
+    work: 'Full website design, service messaging, responsive page structure, domain setup, hosting configuration, and launch support.',
+    tags: ['Web Design', 'Domain Hosting', 'Local Business', 'Responsive Design', 'Launch Support'],
+    url: 'https://fencesbymidwest.com/',
+  },
+  {
     name: 'Buckeye Pads',
     type: 'Small Business Website & Domain Cleanup',
     description:
@@ -123,6 +132,19 @@ export const caseStudies: CaseStudy[] = [
   {
     ...projects[0],
     overview:
+      'Designed and launched a complete website for an Ohio fencing company serving residential and commercial customers. The project focused on creating a professional web presence with clear service messaging, a responsive structure, and reliable domain and hosting setup.',
+    bullets: [
+      'Designed a complete business website for a local fencing company.',
+      'Organized residential, commercial, repair, rental fence, custom gate, and land-clearing services into a clear site structure.',
+      'Created responsive pages that work cleanly across desktop and mobile visitors.',
+      'Configured domain and hosting support for a launch-ready website.',
+      'Focused the site around practical customer action: understanding services and requesting an estimate.',
+    ],
+    tags: ['Web Design', 'Domain Hosting', 'Local Business', 'Responsive Design', 'Launch Support'],
+  },
+  {
+    ...projects[1],
+    overview:
       'Built a cleaner, more professional web presence for a U.S.-based industrial press pad and cover supplier. The project focused on making the business easier to understand online, organizing product and resource information, preparing the company for direct-to-customer sales, and cleaning up domain/DNS issues so the site could launch correctly.',
     bullets: [
       'Built a modern small-business website for an industrial dry-cleaning and laundry supplier.',
@@ -134,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ['Web Design', 'Small Business', 'DNS', 'Hosting', 'Copywriting'],
   },
   {
-    ...projects[1],
+    ...projects[2],
     overview:
       'Created a professional website for a local property-focused business, with a clean layout, clear service messaging, and a structure designed to help visitors quickly understand the company and make contact.',
     bullets: [
@@ -146,7 +168,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ['Web Design', 'Local Business', 'Responsive Design', 'Content Structure'],
   },
   {
-    ...projects[2],
+    ...projects[3],
     overview:
       'Designed and developed a CRM concept for service-based businesses that need a better way to manage customers, jobs, notes, and operational workflows. The work focused on product structure, user experience, workflow planning, and building toward a more polished, sellable software platform.',
     bullets: [
@@ -158,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ['Custom Software', 'CRM', 'Product Design', 'Workflow Automation', 'AI-Assisted Development'],
   },
   {
-    ...projects[3],
+    ...projects[4],
     overview:
       'Developed an internal AI-focused concept under the Kyroscoe brand to explore how small businesses can use AI-assisted workflows, automation, and technical guidance without needing a large internal technology team.',
     bullets: [
@@ -170,7 +192,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ['AI', 'Automation', 'Internal R&D', 'Branding', 'Small Business Technology'],
   },
   {
-    ...projects[4],
+    ...projects[5],
     overview:
       'Helped a small-business client move from a separately built website toward Shopify by identifying required permissions, planning page setup, and preparing the site structure for implementation inside the Shopify environment.',
     bullets: [
