@@ -80,6 +80,7 @@ export const projects: ProjectCard[] = [
     work: 'Full website design, service messaging, responsive page structure, domain setup, hosting configuration, and launch support.',
     tags: ['Web Design', 'Domain Hosting', 'Local Business', 'Responsive Design', 'Launch Support'],
     url: 'https://fencesbymidwest.com/',
+    image: '/brand/midwest-fence-logo.png',
   },
   {
     name: 'Buckeye Pads',
