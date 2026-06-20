@@ -27,12 +27,12 @@ export default function AboutPage() {
             />
 
             <Panel className="p-6 sm:p-8 lg:p-10">
-              <div className="grid items-start gap-10 lg:grid-cols-[minmax(320px,380px)_1fr] lg:gap-14">
-                <figure className="mx-auto w-full max-w-[380px] lg:mx-0">
+              <div className="grid items-start gap-10 lg:grid-cols-[minmax(320px,360px)_1fr] lg:gap-14">
+                <figure className="mx-auto w-full max-w-[360px] lg:mx-0">
                   <img
                     src="/brand/korey-havens.png"
                     alt="Korey Havens, founder of Kyroscoe"
-                    className="aspect-[4/5] w-full rounded-xl border border-cyan-300/10 object-cover object-top shadow-2xl shadow-black/30"
+                    className="aspect-[6/7] w-full rounded-xl border border-cyan-300/10 object-cover object-top shadow-2xl shadow-black/30"
                   />
                   <figcaption className="mt-4 border-l-2 border-cyan-300/60 pl-4">
                     <div className="font-semibold text-white">Korey Havens</div>
@@ -43,22 +43,22 @@ export default function AboutPage() {
                 <div className="space-y-6 text-base leading-8 text-slate-300 sm:text-lg">
                   <p>
                     Kyroscoe was founded by Korey Havens, an IT and cybersecurity
-                    professional with years of experience in support, security,
-                    software development, and business technology.
+                    professional with experience across support, security,
+                    software development, and business systems.
                   </p>
                   <p>
-                    After spending years solving technical problems in real
-                    environments, Korey built Kyroscoe to help small businesses get
-                    practical technology support without the confusion, inflated
-                    pricing, or one-size-fits-all advice that often comes with
-                    traditional IT providers.
+                    After years of solving real-world technical problems, Korey
+                    built Kyroscoe to help small businesses get practical technology
+                    support without the confusion, scare tactics, inflated pricing,
+                    or one-size-fits-all advice that often comes with traditional IT
+                    providers.
                   </p>
                   <p>
                     Kyroscoe helps businesses with IT support, cybersecurity
                     consulting, web design, software development, and technology
-                    guidance. The focus is simple: understand the problem, explain
-                    the options clearly, and build solutions that actually support
-                    the way your business works.
+                    guidance. The goal is simple: understand the problem, explain
+                    the options clearly, and build technology that supports the way
+                    your business actually works.
                   </p>
                   <p className="font-semibold text-white">
                     Technology should make your business easier to run, not harder.
@@ -69,7 +69,7 @@ export default function AboutPage() {
                     onClick={() => navigate("/contact")}
                     className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
                   >
-                    Start a Project
+                    Work With Kyroscoe
                     <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>
