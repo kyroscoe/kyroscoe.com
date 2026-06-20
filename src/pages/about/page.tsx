@@ -21,7 +21,7 @@ export default function AboutPage() {
         <section className="border-b border-cyan-300/10 bg-[#03080b] py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionIntro
-              eyebrow="Who We Are"
+              eyebrow="FOUNDER-LED SUPPORT"
               title="About Kyroscoe"
               text="Practical technology support built around the way your business actually works."
             />
