@@ -23,7 +23,7 @@ export default function AboutPage() {
             <SectionIntro
               eyebrow="FOUNDER-LED SUPPORT"
               title="About Kyroscoe"
-              text="Practical technology support built around the way your business actually works."
+              text="Practical IT, security, web, and software support built around the way your business actually works."
             />
 
             <Panel className="p-6 sm:p-8 lg:p-10">

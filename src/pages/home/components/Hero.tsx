@@ -28,7 +28,7 @@ export function Hero() {
               onClick={() => navigate('/contact')}
               className="inline-flex items-center justify-center gap-2 rounded-md bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
             >
-              Start a Project
+              Work With Kyroscoe
               <ArrowRight className="h-4 w-4" />
             </button>
             <button

@@ -214,7 +214,7 @@ export const navLinks = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export const actionLink = { label: 'Start a Project', href: '/contact', icon: ArrowRight };
+export const actionLink = { label: 'Work With Kyroscoe', href: '/contact', icon: ArrowRight };
 
 export const footerLinks = [
   { label: 'Work', href: '/work' },

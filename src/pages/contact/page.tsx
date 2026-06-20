@@ -15,7 +15,7 @@ const serviceOptions = [
 
 export default function ContactPage() {
   usePageSEO({
-    title: 'Start a Project | Kyroscoe',
+    title: 'Work With Kyroscoe | Kyroscoe',
     description:
       'Start a Kyroscoe project for a website, IT issue, cybersecurity concern, custom tool, automation, or technical consulting need.',
   });
@@ -28,7 +28,7 @@ export default function ContactPage() {
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
             <SectionIntro
               eyebrow="Contact"
-              title="Start a Project"
+              title="Work With Kyroscoe"
               text="Need help with a website, IT issue, cybersecurity concern, or custom technology project? Send the details and Kyroscoe will help figure out the cleanest next step."
             />
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   <textarea name="details" rows={7} className="rounded-md border border-cyan-300/15 bg-black/30 px-4 py-3 text-white outline-none transition focus:border-cyan-300/60" />
                 </label>
                 <button className="rounded-md bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200" type="submit">
-                  Start a Project
+                  Work With Kyroscoe
                 </button>
               </form>
             </Panel>
