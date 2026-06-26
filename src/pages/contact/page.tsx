@@ -2,6 +2,7 @@ import { Footer } from '../home/components/Footer';
 import { Navigation } from '../home/components/Navigation';
 import { PageShell, Panel, SectionIntro } from '../home/components/ui';
 import { usePageSEO } from '../../utils/usePageSEO';
+import { useSearchParams } from 'react-router-dom';
 
 const serviceOptions = [
   'IT Support',
@@ -14,6 +15,9 @@ const serviceOptions = [
 ];
 
 export default function ContactPage() {
+  const [searchParams] = useSearchParams();
+  const submitted = searchParams.get('success') === 'true';
+
   usePageSEO({
     title: 'Work With Kyroscoe | Kyroscoe',
     description:
@@ -33,6 +37,11 @@ export default function ContactPage() {
             />
 
             <Panel className="p-6 sm:p-8">
+              {submitted && (
+                <div className="mb-5 rounded-md border border-cyan-300/25 bg-cyan-300/10 px-4 py-3 text-sm font-semibold text-cyan-100">
+                  Thanks. Your message was sent, and Kyroscoe will follow up soon.
+                </div>
+              )}
               <form
                 name="contact"
                 action="/contact?success=true"
