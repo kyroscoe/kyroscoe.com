@@ -4,43 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050A0A" />
     <meta name="application-name" content="Kyroscoe" />
-    <title>Kyroscoe | Practical Technology for Small Businesses</title>
-    <meta
-      name="description"
-      content="Kyroscoe helps small businesses with websites, IT support, cybersecurity guidance, custom tools, and practical technical consulting."
-    />
-    <meta
-      name="keywords"
-      content="small business technology, IT support, cybersecurity guidance, website builds, technical consulting, custom tools"
-    />
+    <!--page-meta-start-->
+    <title>Kyroscoe | IT Support & Cybersecurity in Ohio</title>
+    <meta name="description" content="IT support, cybersecurity, and vCISO services. On-site in Dayton, Springfield, and Columbus, Ohio. Remote support nationwide." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://kyroscoe.com/" />
-    <meta name="last-modified" id="last-modified" content="" />
-    <meta property="og:title" content="Kyroscoe | Practical Technology for Small Businesses" />
-    <meta
-      property="og:description"
-      content="Kyroscoe helps small businesses with websites, IT support, cybersecurity guidance, custom tools, and practical technical consulting."
-    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kyroscoe.com/" />
     <meta property="og:site_name" content="Kyroscoe" />
+    <meta property="og:title" content="Kyroscoe | IT Support & Cybersecurity in Ohio" />
+    <meta property="og:description" content="IT support, cybersecurity, and vCISO services for small businesses." />
+    <meta property="og:url" content="https://kyroscoe.com/" />
+    <meta property="og:image" content="https://kyroscoe.com/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kyroscoe — IT support and cybersecurity" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kyroscoe | Practical Technology for Small Businesses" />
-    <meta
-      name="twitter:description"
-      content="Kyroscoe helps small businesses with websites, IT support, cybersecurity guidance, custom tools, and practical technical consulting."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="twitter:title" content="Kyroscoe | IT Support & Cybersecurity in Ohio" />
+    <meta name="twitter:description" content="IT support, cybersecurity, and vCISO services for small businesses." />
+    <meta name="twitter:image" content="https://kyroscoe.com/social-card.png" />
+    <!--page-meta-end-->
   </head>
   <body>
-    <form name="contact" data-netlify="true" hidden>
-      <input type="text" name="name" />
+    <!-- Netlify detects this static definition. Keep it outside React's hydration root. -->
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="name" />
       <input type="email" name="email" />
-      <input type="text" name="business" />
+      <input name="business" />
       <select name="service"></select>
       <textarea name="details"></textarea>
+      <input name="bot-field" />
     </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -1,86 +1,30 @@
-import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { Footer } from "../home/components/Footer";
-import { Navigation } from "../home/components/Navigation";
-import { PageShell, Panel, SectionIntro } from "../home/components/ui";
-import { usePageSEO } from "../../utils/usePageSEO";
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { Contact } from '../home/components/Contact';
+import { Footer } from '../home/components/Footer';
+import { Navigation } from '../home/components/Navigation';
+import { certifications } from '../home/components/siteData';
+import { PageShell, SectionIntro } from '../home/components/ui';
+import { usePageSEO } from '../../utils/usePageSEO';
 
 export default function AboutPage() {
-  const navigate = useNavigate();
-
-  usePageSEO({
-    title: "About | Kyroscoe",
-    description:
-      "Learn about Kyroscoe and founder Korey Havens, helping small businesses with IT support, cybersecurity, web design, software development, and practical technology guidance.",
-  });
-
-  return (
-    <PageShell>
-      <Navigation />
-      <main>
-        <section className="border-b border-cyan-300/10 bg-[#03080b] py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionIntro
-              eyebrow="FOUNDER-LED SUPPORT"
-              title="About Kyroscoe"
-              text="Practical IT, security, web, and software support built around the way your business actually works."
-            />
-
-            <Panel className="p-6 sm:p-8 lg:p-10">
-              <div className="grid items-start gap-10 lg:grid-cols-[minmax(320px,360px)_1fr] lg:gap-14">
-                <figure className="mx-auto w-full max-w-[360px] lg:mx-0">
-                  <img
-                    src="/brand/korey-havens.png"
-                    alt="Korey Havens, founder of Kyroscoe"
-                    className="aspect-[6/7] w-full rounded-xl border border-cyan-300/10 object-cover object-top shadow-2xl shadow-black/30"
-                  />
-                  <figcaption className="mt-4 border-l-2 border-cyan-300/60 pl-4">
-                    <div className="font-semibold text-white">Korey Havens</div>
-                    <div className="mt-1 text-sm text-slate-400">
-                      Founder, Kyroscoe
-                    </div>
-                  </figcaption>
-                </figure>
-
-                <div className="space-y-6 text-base leading-8 text-slate-300 sm:text-lg">
-                  <p>
-                    Kyroscoe was founded by Korey Havens, an IT and
-                    cybersecurity professional with experience across support,
-                    security, software development, and business systems.
-                  </p>
-                  <p>
-                    After years of solving real-world technical problems, Korey
-                    built Kyroscoe to help small businesses get practical
-                    technology support without the confusion, inflated pricing,
-                    or one-size-fits-all advice that often comes with
-                    traditional IT providers.
-                  </p>
-                  <p>
-                    Kyroscoe helps businesses with IT support, cybersecurity
-                    consulting, web design, software development, and technology
-                    guidance. The goal is simple: understand the problem,
-                    explain the options clearly, and build technology that
-                    supports the way your business actually works.
-                  </p>
-                  <p className="font-semibold text-white">
-                    Technology should make your business easier to run, not
-                    harder. Kyroscoe exists to make that happen.
-                  </p>
-
-                  <button
-                    onClick={() => navigate("/contact")}
-                    className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
-                  >
-                    Work With Kyroscoe
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            </Panel>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </PageShell>
-  );
+  usePageSEO('/about');
+  return <PageShell><Navigation /><main id="main-content" tabIndex={-1}>
+    <section className="page-intro container"><SectionIntro level={1} eyebrow="About Kyroscoe" title="Security experience. A direct relationship." text="We help small businesses make informed IT and cybersecurity decisions." /></section>
+    <section className="section section-border"><div className="container about-grid">
+      <figure>
+        <img src="/brand/korey-havens.webp" alt="Korey Havens, founder of Kyroscoe" className="founder-photo" width="600" height="700" />
+        <figcaption className="founder-caption">Korey Havens<span>Founder, Kyroscoe</span></figcaption>
+      </figure>
+      <div className="about-copy"><p className="eyebrow">Meet our founder</p><h2>18+ years leading cybersecurity programs.</h2>
+        <p>Korey Havens has built and led enterprise security programs across federal, defense, SaaS, and healthcare environments.</p>
+        <p>His experience spans incident response, compliance, cloud security, and audit readiness. He works with executives, boards, and technical teams to explain risk and turn security priorities into business decisions.</p>
+        <p>At Kyroscoe, we apply that experience to small business IT support, security planning, and virtual CISO services.</p>
+        <Link className="text-link" to="/contact">Talk with our team <ArrowUpRight size={17} aria-hidden="true" /></Link>
+      </div>
+    </div></section>
+    <section className="section"><div className="container"><SectionIntro eyebrow="Professional certifications" title="Credentials behind the guidance." />
+      <ul className="credentials">{certifications.map(([short, full]) => <li key={short}><strong>{short}</strong><span>{full}</span></li>)}</ul>
+    </div></section><Contact />
+  </main><Footer /></PageShell>;
 }

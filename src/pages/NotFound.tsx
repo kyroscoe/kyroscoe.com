@@ -1,17 +1,14 @@
+import { Link, useLocation } from 'react-router-dom';
+import { Footer } from './home/components/Footer';
+import { Navigation } from './home/components/Navigation';
+import { PageShell, SectionIntro } from './home/components/ui';
+import { usePageSEO } from '../utils/usePageSEO';
+
 export default function NotFound() {
-  return (
-    <div className="flex h-screen flex-col items-center justify-center px-4 text-center">
-      <h1 className="text-5xl font-semibold text-gray-100 md:text-5xl">404</h1>
-      <h2 className="mt-6 text-2xl font-semibold md:text-3xl">Page not found</h2>
-      <p className="mt-4 max-w-xl text-xl text-gray-500 md:text-2xl">
-        The page you requested is not available. Head back to the homepage or contact Kyroscoe for help.
-      </p>
-      <a
-        href="/"
-        className="mt-8 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-      >
-        Return home
-      </a>
-    </div>
-  );
+  const { pathname } = useLocation();
+  usePageSEO(pathname);
+  return <PageShell><Navigation /><main className="not-found" id="main-content" tabIndex={-1}><div className="container">
+    <SectionIntro level={1} eyebrow="404" title="Page not found." text="The page may have moved or the link may be incorrect." />
+    <div className="actions"><Link to="/" className="button">Return home</Link><Link to="/contact" className="text-link">Contact our team</Link></div>
+  </div></main><Footer /></PageShell>;
 }

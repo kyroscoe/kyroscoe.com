@@ -1,36 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import { footerLinks } from "./siteData";
+import { Link } from 'react-router-dom';
+import { business, footerLinks } from './siteData';
+import { BrandMark } from './BrandMark';
 
 export function Footer() {
-  const navigate = useNavigate();
-
-  return (
-    <footer className="border-t border-cyan-300/10 bg-[#020608]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
-        <div>
-          <img
-            src="/brand/horizontal-lockup-dark-removebg.png"
-            alt="Kyroscoe"
-            className="h-14 w-auto object-contain"
-          />
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400">
-            Practical technology for small businesses: IT support, cybersecurity
-            guidance, website builds, custom tools, and general technical
-            consulting.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-300">
-          {footerLinks.map((item) => (
-            <button
-              key={item.href}
-              onClick={() => navigate(item.href)}
-              className="text-left transition hover:text-cyan-300"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+  return <footer className="site-footer">
+    <div className="container footer-top">
+      <div>
+        <Link to="/" className="brand" aria-label="Kyroscoe home"><BrandMark /></Link>
+        <p className="footer-description">IT support. Cybersecurity. A team you can call.</p>
+        <a href={`mailto:${business.email}`}>{business.email}</a>
+        <a className="footer-phone" href={business.phoneHref}>{business.phone}</a>
       </div>
-    </footer>
-  );
+      <nav className="footer-nav" aria-label="Footer navigation">
+        {footerLinks.map((item) => <Link key={item.href} to={item.href}>{item.label}</Link>)}
+      </nav>
+    </div>
+    <div className="container footer-bottom"><span>© {new Date().getFullYear()} Kyroscoe, LLC</span><span>Ohio on-site · Nationwide remote</span></div>
+  </footer>;
 }

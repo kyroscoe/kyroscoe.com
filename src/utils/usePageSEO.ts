@@ -1,33 +1,29 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { getPageSEO } from './seo';
 
-type PageSEO = {
-  title: string;
-  description: string;
-};
-
-const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://kyroscoe.com').replace(/\/$/, '');
-
-function setMeta(selector: string, attribute: 'content' | 'href', value: string) {
-  const element = document.head.querySelector(selector);
-  if (element) {
-    element.setAttribute(attribute, value);
+function setMeta(attribute: 'name' | 'property', key: string, value: string) {
+  let element = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
+  if (!element) {
+    element = document.createElement('meta');
+    element.setAttribute(attribute, key);
+    document.head.appendChild(element);
   }
+  element.content = value;
 }
 
-export function usePageSEO({ title, description }: PageSEO) {
-  const { pathname } = useLocation();
-
+export function usePageSEO(pathname: string) {
   useEffect(() => {
-    const url = `${siteUrl}${pathname === '/' ? '/' : pathname}`;
-
-    document.title = title;
-    setMeta('meta[name="description"]', 'content', description);
-    setMeta('link[rel="canonical"]', 'href', url);
-    setMeta('meta[property="og:title"]', 'content', title);
-    setMeta('meta[property="og:description"]', 'content', description);
-    setMeta('meta[property="og:url"]', 'content', url);
-    setMeta('meta[name="twitter:title"]', 'content', title);
-    setMeta('meta[name="twitter:description"]', 'content', description);
-  }, [description, pathname, title]);
+    const seo = getPageSEO(pathname);
+    document.title = seo.title;
+    setMeta('name', 'description', seo.description);
+    setMeta('name', 'robots', seo.noindex ? 'noindex, follow' : 'index, follow');
+    for (const [key, value] of Object.entries({ title: seo.title, description: seo.description, url: seo.url, image: seo.image })) {
+      setMeta('property', 'og:' + key, value);
+      if (key !== 'url') setMeta('name', 'twitter:' + key, value);
+    }
+    const canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]') || document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.href = seo.url;
+    if (!canonical.parentNode) document.head.appendChild(canonical);
+  }, [pathname]);
 }
