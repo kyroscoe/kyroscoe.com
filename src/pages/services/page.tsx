@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Contact } from '../home/components/Contact';
 import { Footer } from '../home/components/Footer';
 import { Navigation } from '../home/components/Navigation';
@@ -26,7 +26,14 @@ export default function ServicesPage() {
       <Panel><p className="emergency-note" style={{ borderTop: 0, paddingTop: 0 }}><strong>Need emergency support?</strong> Call <a className="text-link" href={business.phoneHref}>{business.phone}</a> to discuss availability. Response and resolution depend on the issue and your support agreement.</p></Panel>
       <div className="actions"><Link className="button" to="/contact">Discuss a support plan <ArrowRight size={18} aria-hidden="true" /></Link></div>
     </div></section>
-    <section className="section"><div className="container"><SectionIntro eyebrow="Technology partners" title="Support for the platforms you use." /><div className="partner-row">{partners.map((partner) => <span key={partner}>{partner}</span>)}</div></div></section>
+    <section className="section"><div className="container">
+      <SectionIntro eyebrow="Technology partners" title="Support for the platforms you use." />
+      <div className="partner-row">{partners.map((partner) => <span key={partner}>{partner}</span>)}</div>
+      <aside className="panel partner-referral" aria-labelledby="ads-partner-title">
+        <div><p className="eyebrow">Partner services</p><h3 id="ads-partner-title">Google Ads support</h3><p>For help with Google Ads, connect with our partner Calibration Media.</p></div>
+        <a className="text-link" href="https://calibrationmediagroup.com/" target="_blank" rel="noopener noreferrer">Visit Calibration Media <ArrowUpRight size={18} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
+      </aside>
+    </div></section>
     <Contact />
   </main><Footer /></PageShell>;
 }
