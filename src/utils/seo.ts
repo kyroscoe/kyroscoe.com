@@ -12,11 +12,11 @@ export const pageMetadata: Record<string, { title: string; description: string }
   },
   '/about': {
     title: 'About Korey Havens & Kyroscoe',
-    description: 'Meet Korey Havens, founder of Kyroscoe. 18+ years of cybersecurity leadership across federal, defense, SaaS, and healthcare environments.',
+    description: 'Meet Korey Havens, founder of Kyroscoe. IT and cybersecurity experience since 2007, progressing from administration roles to CISO.',
   },
   '/work': {
-    title: 'Selected Website Projects | Kyroscoe',
-    description: 'Explore Kyroscoe client website projects, including design, content, domain setup, hosting, and launch support.',
+    title: 'IT Support, Security & Website Projects | Kyroscoe',
+    description: 'Explore our founder’s IT support, security assessment, and vCISO experience, alongside Kyroscoe client website projects.',
   },
   '/contact': {
     title: 'Contact Kyroscoe | IT & Cybersecurity Support',

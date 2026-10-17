@@ -17,6 +17,7 @@ export function Services() {
           </article>;
         })}
       </div>
+      <div className="actions"><Link className="text-link" to="/work#it-security">Explore our IT & security experience <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
     </div>
   </section>;
 }

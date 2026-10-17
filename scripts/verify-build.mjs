@@ -30,7 +30,14 @@ for (const field of ['form-name', 'name', 'email', 'business', 'service', 'detai
 assert.ok(contact.includes('data-netlify="true"'), 'Static form is not detectable by Netlify');
 assert.ok(contact.includes('data-netlify-honeypot="bot-field"'));
 assert.ok(!contact.includes('Your message was submitted'), 'Initial page must not report a successful submission');
-assert.ok(documents.get('/about').includes('18+ years'));
+assert.ok(documents.get('/about').includes('experience since 2007'));
+assert.ok(!documents.get('/about').includes('18+ years leading cybersecurity programs'));
+for (const badge of ['cissp', 'cism', 'ccsp', 'crisc', 'cciso', 'ceh', 'sfpc', 'pmp', 'csm', 'cisco-cyberops', 'cisco-ccst-networking']) assert.ok(documents.get('/about').includes('/credentials/' + badge + '.jpg'), 'Missing credential image: ' + badge);
+for (const client of ['Buckeye Pads', 'TrueML', 'NELSD']) assert.ok(documents.get('/work').includes(client), 'Missing approved experience: ' + client);
+for (const path of ['/', '/services']) {
+  assert.ok(documents.get(path).includes('/partners/microsoft-solutions-partner.jpg'));
+  assert.ok(documents.get(path).includes('/partners/aws-managed-service-provider.jpg'));
+}
 assert.ok(documents.get('/contact').includes('info@kyroscoe.com'));
 assert.ok(documents.get('/contact').includes('937-631-1521'));
 const sitemap = readFileSync('out/sitemap.xml', 'utf8');
@@ -39,7 +46,7 @@ const missing = readFileSync('out/404.html', 'utf8');
 assert.ok(missing.includes('noindex, follow'));
 assert.ok(missing.includes('Page not found.'));
 const walk = (directory) => readdirSync(directory).flatMap((name) => statSync(join(directory, name)).isDirectory() ? walk(join(directory, name)) : [join(directory, name)]);
-for (const file of walk('out')) assert.ok(!/\.xlsx$|\.map$|fieldcrate|kyroai/i.test(file), 'Private, obsolete, or debug file in output: ' + file);
+for (const file of walk('out')) assert.ok(!/\.xlsx$|\.map$|fieldcrate|kyroai|fw9\.pdf$/i.test(file), 'Private, obsolete, or debug file in output: ' + file);
 const css = readFileSync('src/index.css', 'utf8');
 for (const color of ['#050A0A', '#00E6D0', '#F5F7F7', '#111818', '#8A9999']) assert.ok(css.includes(color));
 console.log('Verified 7 prerendered pages, 404, internal links, anchors, assets, form fields, sitemap, brand tokens, and excluded files.');

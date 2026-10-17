@@ -38,15 +38,46 @@ export const supportPlans = [
   { title: 'Website care', text: 'Updates, maintenance, and technical support for your business website.' },
 ];
 export const certifications = [
-  ['CISSP', 'Certified Information Systems Security Professional'],
-  ['CISM', 'Certified Information Security Manager'],
-  ['CCSP', 'Certified Cloud Security Professional'],
-  ['CRISC', 'Certified in Risk and Information Systems Control'],
-  ['CEH', 'Certified Ethical Hacker'],
-  ['SFPC', 'Security Fundamentals Professional Certification'],
-  ['PMP', 'Project Management Professional'],
+  { id: 'cissp', short: 'CISSP', title: 'Certified Information Systems Security Professional', image: '/credentials/cissp.jpg' },
+  { id: 'cism', short: 'CISM', title: 'Certified Information Security Manager', image: '/credentials/cism.jpg' },
+  { id: 'ccsp', short: 'CCSP', title: 'Certified Cloud Security Professional', image: '/credentials/ccsp.jpg' },
+  { id: 'crisc', short: 'CRISC', title: 'Certified in Risk and Information Systems Control', image: '/credentials/crisc.jpg' },
+  { id: 'cciso', short: 'CCISO', title: 'Certified Chief Information Security Officer', image: '/credentials/cciso.jpg' },
+  { id: 'ceh', short: 'CEH', title: 'Certified Ethical Hacker', image: '/credentials/ceh.jpg' },
+  { id: 'sfpc', short: 'SFPC', title: 'Security Fundamentals Professional Certification', image: '/credentials/sfpc.jpg' },
+  { id: 'pmp', short: 'PMP', title: 'Project Management Professional', image: '/credentials/pmp.jpg' },
+  { id: 'csm', short: 'CSM', title: 'Certified ScrumMaster', image: '/credentials/csm.jpg' },
+  { id: 'cyberops', short: 'CyberOps Associate', title: 'Cisco Certified CyberOps Associate', image: '/credentials/cisco-cyberops.jpg' },
+  { id: 'ccst', short: 'CCST Networking', title: 'Cisco Certified Support Technician Networking', image: '/credentials/cisco-ccst-networking.jpg' },
 ];
-export const partners = ['Microsoft', 'AWS', 'Cisco', 'Google Workspace'];
+
+export const serviceExamples = [
+  {
+    id: 'buckeye-pads-it', category: 'IT support', client: 'Buckeye Pads', title: 'Office network and printer support',
+    description: 'Reinstalled printers and added them to the network after an outage. Set up a small local network with three PCs and two printers, including a shipping printer.',
+  },
+  {
+    id: 'medical-assessment', category: 'Cybersecurity', client: 'Local medical practice', title: 'HIPAA-focused compliance assessment',
+    description: 'Performed a HIPAA-focused compliance assessment for a local doctor’s office.',
+  },
+  {
+    id: 'fintech-vciso', category: 'Security leadership', client: 'TrueML', title: 'Virtual CISO services',
+    description: 'Provided virtual Chief Information Security Officer services for TrueML, a fintech company.',
+  },
+  {
+    id: 'vendor-assessments', category: 'Third-party risk', client: 'Law offices and a credit union', title: 'Vendor and third-party assessments',
+    description: 'Performed vendor and third-party assessments for local law offices and a local credit union.',
+  },
+  {
+    id: 'school-audio', category: 'On-site technical support', client: 'NELSD', title: 'Football press box audio repair',
+    description: 'Repaired audio equipment in the football field press box for NELSD.',
+  },
+];
+export const partners = ['Cisco', 'Google Workspace'];
+export const partnerBadges = [
+  { name: 'Microsoft Solutions Partner', image: '/partners/microsoft-solutions-partner.jpg' },
+  { name: 'AWS Partner — Managed Service Provider', image: '/partners/aws-managed-service-provider.jpg' },
+];
 
 export type Project = { id: string; name: string; type: string; description: string; bullets: string[]; url: string };
 export const projects: Project[] = [

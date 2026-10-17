@@ -20,8 +20,8 @@ Deployment:
   Every public page is prerendered with unique metadata and HTML.
   Unknown paths serve 404.html with HTTP 404; existing pages/assets take precedence.
   Netlify Forms detects the static form definition outside the React root.
-  Configure Netlify form email notifications for info@kyroscoe.com in the Netlify dashboard.
-  Test a deployed submission and confirm both the form record and notification receipt.
+  The owner confirmed contact notifications are configured for info@kyroscoe.com and verified receipt.
+  Recheck submission storage and notification delivery after future form changes.
   Notification recipients cannot be configured in the client-side form.
 
 Before publication:
@@ -30,6 +30,11 @@ Before publication:
   The source includes no advertising pixels, analytics, payment checkout, or scheduling embed.
   Client names are retained with permission; no unverified business results are claimed.
   Browser screenshots and desktop/mobile visual QA still need an available browser session.
+  The founder's career began in 2007 and covers IT and cybersecurity, progressing from administration to CISO.
+  IT/security examples are attributed to founder experience; the owner approved naming Buckeye Pads, TrueML, and NELSD.
+  Certification images and Microsoft/AWS designation images were supplied and confirmed by the owner; public verification links remain pending.
+  The watermarked Cisco AI image and the W-9 are excluded.
+  See docs/email-authentication.md for DNS preparation and form verification status.
 
 Brand palette:
   Black #050A0A; Teal #00E6D0; White #F5F7F7; Dark gray #111818; Muted gray #8A9999.

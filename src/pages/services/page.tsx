@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Contact } from '../home/components/Contact';
 import { Footer } from '../home/components/Footer';
 import { Navigation } from '../home/components/Navigation';
+import { PartnerBadges } from '../home/components/PartnerBadges';
 import { business, partners, services, supportPlans } from '../home/components/siteData';
 import { PageShell, Panel, SectionIntro } from '../home/components/ui';
 import { usePageSEO } from '../../utils/usePageSEO';
@@ -28,6 +29,7 @@ export default function ServicesPage() {
     </div></section>
     <section className="section"><div className="container">
       <SectionIntro eyebrow="Technology partners" title="Support for the platforms you use." />
+      <PartnerBadges />
       <div className="partner-row">{partners.map((partner) => <span key={partner}>{partner}</span>)}</div>
       <aside className="panel partner-referral" aria-labelledby="ads-partner-title">
         <div><p className="eyebrow">Partner services</p><h3 id="ads-partner-title">Google Ads support</h3><p>For help with Google Ads, connect with our partner Calibration Media.</p></div>

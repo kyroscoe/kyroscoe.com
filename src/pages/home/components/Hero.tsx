@@ -11,7 +11,7 @@ export function Hero() {
         <div className="actions"><Link to="/contact" className="button">Talk to our team <ArrowRight size={18} aria-hidden="true" /></Link><Link to="/services" className="text-link">Explore services <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
       </div>
       <aside className="hero-aside" aria-label="Experience and availability">
-        <div className="hero-stat"><strong>18<span>+</span></strong><span>years of cybersecurity experience<br />behind Kyroscoe</span></div>
+        <div className="hero-stat"><strong>18<span>+</span></strong><span>years of IT & cybersecurity experience<br />behind Kyroscoe</span></div>
         <div className="aside-line"><span className="eyebrow">Local support</span><p>Dayton. Springfield. Columbus.</p></div>
         <div className="aside-line"><span className="eyebrow">Remote support</span><p>Across the United States.</p></div>
         <Link to="/about" className="text-link">Meet our founder <ArrowUpRight size={17} aria-hidden="true" /></Link>
