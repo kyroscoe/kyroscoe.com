@@ -3,8 +3,8 @@ import { business } from '../pages/home/components/siteData';
 export const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://kyroscoe.com').replace(/\/$/, '');
 export const pageMetadata: Record<string, { title: string; description: string }> = {
   '/': {
-    title: 'Kyroscoe | IT Support & Cybersecurity in Ohio',
-    description: 'IT support, cybersecurity, and vCISO services. On-site in Dayton, Springfield, and Columbus, Ohio. Remote support nationwide.',
+    title: 'Kyroscoe | Small Business IT & Cybersecurity in Springfield, Ohio',
+    description: 'End-to-end IT and cybersecurity solutions for small businesses in Springfield, Ohio and surrounding areas. Remote support available nationwide.',
   },
   '/services': {
     title: 'IT Support, Cybersecurity & vCISO Services | Kyroscoe',
@@ -52,7 +52,7 @@ export const businessSchema = {
   email: business.email,
   telephone: '+1-937-631-1521',
   logo: siteUrl + '/brand/horizontal-lockup-dark-removebg.png',
-  description: 'IT support, cybersecurity, and virtual CISO services for small businesses.',
+  description: 'End-to-end IT and cybersecurity solutions for small businesses in Springfield, Ohio and surrounding areas.',
   areaServed: [
     { '@type': 'City', name: 'Dayton, Ohio' },
     { '@type': 'City', name: 'Springfield, Ohio' },

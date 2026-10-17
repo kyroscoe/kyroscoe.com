@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Contact } from '../home/components/Contact';
 import { Footer } from '../home/components/Footer';
 import { Navigation } from '../home/components/Navigation';
+import { ScrambleText } from '../home/components/ScrambleText';
 import { certifications } from '../home/components/siteData';
 import { PageShell, SectionIntro } from '../home/components/ui';
 import { usePageSEO } from '../../utils/usePageSEO';
@@ -16,7 +17,7 @@ export default function AboutPage() {
         <img src="/brand/korey-havens.webp" alt="Korey Havens, founder of Kyroscoe" className="founder-photo" width="600" height="700" />
         <figcaption className="founder-caption">Korey Havens<span>Founder, Kyroscoe</span></figcaption>
       </figure>
-      <div className="about-copy"><p className="eyebrow">Meet our founder</p><h2>IT and cybersecurity experience since 2007.</h2>
+      <div className="about-copy"><p className="eyebrow">Meet our founder</p><h2><ScrambleText text="IT and cybersecurity experience since 2007." /></h2>
         <p>Korey Havens began his career in 2007, progressing from administration roles to Chief Information Security Officer (CISO). His work spans IT operations and cybersecurity across federal, defense, SaaS, and healthcare environments.</p>
         <p>His experience spans incident response, compliance, cloud security, and audit readiness. He works with executives, boards, and technical teams to explain risk and turn security priorities into business decisions.</p>
         <p>At Kyroscoe, we apply that experience to small business IT support, security planning, and virtual CISO services.</p>

@@ -12,6 +12,12 @@ Local commands (Node 22):
   npm run preview
 
 The built preview is http://localhost:4173.
+Digital theme:
+  Fixed teal circuit traces with moving power dots appear throughout the site.
+  Major headings decode once when revealed; body copy remains static.
+  Pause motion stops decorative effects, and reduced-motion settings show static content.
+  Oxanium is self-hosted; its license is included in public/fonts/Oxanium-OFL.txt.
+
 Preview POST requests return 405; no messages are sent from the local preview.
 Nothing is automatically committed, pushed, or deployed by these commands.
 
