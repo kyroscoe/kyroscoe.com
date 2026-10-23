@@ -11,7 +11,7 @@ for (const [path, html] of documents) {
   assert.equal((html.match(/<main(?:\s|>)/g) || []).length, 1, path + ' must have one main landmark');
   assert.ok(html.includes('id="main-content"'), path + ' is missing the skip-link target');
   assert.ok(html.includes('og:image'), path + ' is missing social image metadata');
-  assert.ok(!/FieldCrate|KyroAI|Shopify|Computer repair under|corporate runaround|oversized vendor pitch/.test(html), 'Removed copy remains in ' + path);
+  assert.ok(!/FieldCrate|KyroAI|Computer repair under|corporate runaround|oversized vendor pitch/.test(html), 'Removed copy remains in ' + path);
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const url = match[1].replaceAll('&amp;', '&');
     if (!url.startsWith('/') && !url.startsWith('#')) continue;
@@ -37,6 +37,8 @@ for (const client of ['Buckeye Pads', 'TrueML', 'NELSD']) assert.ok(documents.ge
 for (const path of ['/', '/services']) {
   assert.ok(documents.get(path).includes('/partners/microsoft-solutions-partner.jpg'));
   assert.ok(documents.get(path).includes('/partners/aws-managed-service-provider.jpg'));
+  assert.ok(documents.get(path).includes('/partners/shopify-partner.jpg'));
+  assert.ok(documents.get(path).includes('/partners/google-cloud-partner.png'));
 }
 assert.ok(documents.get('/contact').includes('info@kyroscoe.com'));
 assert.ok(documents.get('/contact').includes('937-631-1521'));

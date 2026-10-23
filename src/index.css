@@ -153,7 +153,7 @@ li::marker { color: var(--teal); }
 .partner-badges img { width: auto; height: auto; max-height: 130px; max-width: 100%; object-fit: contain; }
 .partner-band { padding-block: 1.75rem; }
 .partner-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.partner-band .partner-badges { margin: 0; grid-template-columns: repeat(2, minmax(0, 180px)); }
+.partner-band .partner-badges { margin: 0; width: min(100%, 768px); grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .partner-band .partner-badges li { min-height: 100px; }
 .partner-band .partner-badges img { max-height: 90px; }
 .partner-referral { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2.5rem; }
@@ -219,6 +219,7 @@ li::marker { color: var(--teal); }
   .mobile-nav { display: none !important; }
 }
 @media (max-width: 900px) {
+  .partner-band .partner-badges { width: min(100%, 376px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .credentials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-grid { grid-template-columns: minmax(0, 1fr) 220px; gap: 2.5rem; }
   .hero-stat strong { font-size: 4rem; }

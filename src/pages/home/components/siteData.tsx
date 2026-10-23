@@ -76,6 +76,8 @@ export const serviceExamples = [
 export const partners = ['Cisco', 'Google Workspace'];
 export const partnerBadges = [
   { name: 'Microsoft Solutions Partner', image: '/partners/microsoft-solutions-partner.jpg' },
+  { name: 'Shopify Partner', image: '/partners/shopify-partner.jpg' },
+  { name: 'Google Cloud Partner', image: '/partners/google-cloud-partner.png' },
   { name: 'AWS Partner — Managed Service Provider', image: '/partners/aws-managed-service-provider.jpg' },
 ];
 
