@@ -36,7 +36,7 @@ for (const badge of ['cissp', 'cism', 'ccsp', 'crisc', 'cciso', 'ceh', 'sfpc', '
 for (const client of ['Buckeye Pads', 'TrueML', 'NELSD']) assert.ok(documents.get('/work').includes(client), 'Missing approved experience: ' + client);
 for (const path of ['/', '/services']) {
   assert.ok(documents.get(path).includes('/partners/microsoft-solutions-partner.jpg'));
-  assert.ok(documents.get(path).includes('/partners/aws-managed-service-provider.jpg'));
+  assert.ok(documents.get(path).includes('/partners/aws-managed-service-provider.png'));
   assert.ok(documents.get(path).includes('/partners/shopify-partner.jpg'));
   assert.ok(documents.get(path).includes('/partners/google-cloud-partner.png'));
 }
