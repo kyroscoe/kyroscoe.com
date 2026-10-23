@@ -73,8 +73,8 @@ export const serviceExamples = [
     description: 'Repaired audio equipment in the football field press box for NELSD.',
   },
 ];
-export const partners = ['Cisco', 'Google Workspace'];
 export const partnerBadges = [
+  { name: 'Cisco 360 Partner Program', image: '/partners/cisco-360-partner.jpg' },
   { name: 'Microsoft Solutions Partner', image: '/partners/microsoft-solutions-partner.jpg' },
   { name: 'Shopify Partner', image: '/partners/shopify-partner.jpg' },
   { name: 'Google Cloud Partner', image: '/partners/google-cloud-partner.png' },

@@ -146,14 +146,12 @@ li::marker { color: var(--teal); }
 .plan-grid p { color: var(--muted-gray); font-size: .95rem; margin-top: .75rem; }
 .emergency-note { padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted-gray); font-size: .9rem; }
 .emergency-note strong { color: var(--white); }
-.partner-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-.partner-row span { font-size: 1.1rem; font-weight: 500; }
 .partner-badges { display: grid; grid-template-columns: repeat(2, minmax(0, 240px)); gap: 1rem; list-style: none; padding: 0; margin: 0 0 2rem; }
 .partner-badges li { display: flex; align-items: center; justify-content: center; min-height: 144px; padding: .5rem; background: var(--white); border-radius: 4px; margin: 0; }
 .partner-badges img { width: auto; height: auto; max-height: 130px; max-width: 100%; object-fit: contain; }
 .partner-band { padding-block: 1.75rem; }
 .partner-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.partner-band .partner-badges { margin: 0; width: min(100%, 768px); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.partner-band .partner-badges { margin: 0; width: min(100%, 900px); grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .partner-band .partner-badges li { min-height: 100px; }
 .partner-band .partner-badges img { max-height: 90px; }
 .partner-referral { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2.5rem; }
